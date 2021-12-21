@@ -28,9 +28,6 @@
   "dependencies": {
     "Flutter": [
 
-    ],
-    "fluttertoast": [
-
     ]
   }
 }
