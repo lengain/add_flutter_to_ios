@@ -14,6 +14,7 @@
 		33F6BB3A277183590099CF91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33F6BB39277183590099CF91 /* Assets.xcassets */; };
 		33F6BB3D277183590099CF91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F6BB3B277183590099CF91 /* LaunchScreen.storyboard */; };
 		33F6BB452771A3E30099CF91 /* ORFlutterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F6BB442771A3E30099CF91 /* ORFlutterViewController.swift */; };
+		33F6BB47277318830099CF91 /* FlutterEngineManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F6BB46277318830099CF91 /* FlutterEngineManager.swift */; };
 		8C0C9A7A188F009D6EF29903 /* Pods_Original.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553A65FCEA00CB8159E86613 /* Pods_Original.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		33F6BB3C277183590099CF91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33F6BB3E277183590099CF91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33F6BB442771A3E30099CF91 /* ORFlutterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ORFlutterViewController.swift; sourceTree = "<group>"; };
+		33F6BB46277318830099CF91 /* FlutterEngineManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlutterEngineManager.swift; sourceTree = "<group>"; };
 		553A65FCEA00CB8159E86613 /* Pods_Original.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Original.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6693D902F2A9CB496562BA68 /* Pods-Original.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Original.debug.xcconfig"; path = "Target Support Files/Pods-Original/Pods-Original.debug.xcconfig"; sourceTree = "<group>"; };
 		C882D07AAED75A7124A3D558 /* Pods-Original.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Original.release.xcconfig"; path = "Target Support Files/Pods-Original/Pods-Original.release.xcconfig"; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				33F6BB3B277183590099CF91 /* LaunchScreen.storyboard */,
 				33F6BB3E277183590099CF91 /* Info.plist */,
 				33F6BB442771A3E30099CF91 /* ORFlutterViewController.swift */,
+				33F6BB46277318830099CF91 /* FlutterEngineManager.swift */,
 			);
 			path = Original;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			files = (
 				33F6BB35277183570099CF91 /* ViewController.swift in Sources */,
 				33F6BB31277183570099CF91 /* AppDelegate.swift in Sources */,
+				33F6BB47277318830099CF91 /* FlutterEngineManager.swift in Sources */,
 				33F6BB452771A3E30099CF91 /* ORFlutterViewController.swift in Sources */,
 				33F6BB33277183570099CF91 /* SceneDelegate.swift in Sources */,
 			);

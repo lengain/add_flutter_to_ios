@@ -8,14 +8,13 @@
 import Flutter
 import FlutterPluginRegistrant
 
+
 class ORFlutterViewController: FlutterViewController, UIGestureRecognizerDelegate {
     
     static func flutterViewController() -> ORFlutterViewController {
-        let flutterEngine = (UIApplication.shared.delegate as! AppDelegate).engines.makeEngine(withEntrypoint: nil, libraryURI: nil)
-        flutterEngine.run()
-        GeneratedPluginRegistrant.register(with: flutterEngine)
+        
         let flutterViewController =
-        ORFlutterViewController(engine: flutterEngine, nibName: nil, bundle: nil)
+        ORFlutterViewController(engine: FlutterEngineManager.manager.flutterEngine(), nibName: nil, bundle: nil)
         return flutterViewController;
     }
     
@@ -46,19 +45,19 @@ class ORFlutterViewController: FlutterViewController, UIGestureRecognizerDelegat
         super.init(engine: engine, nibName: nibName, bundle: nibBundle)
         self.channel = FlutterMethodChannel(
             name: "page-router", binaryMessenger: self.engine!.binaryMessenger)
-        self.channel?.setMethodCallHandler({ (call: FlutterMethodCall, result: @escaping FlutterResult) in
+        self.channel?.setMethodCallHandler({[weak self] (call: FlutterMethodCall, result: @escaping FlutterResult) in
             switch call.method {
             case "backButtonAction":
-                self.navigationController?.popViewController(animated: true)
+                self?.navigationController?.popViewController(animated: true)
             case "callback":
-                self.callBack?(call.arguments as Any)
+                self?.callBack?(call.arguments as Any)
             case "original":
-                
-                self.navigationController?.pushViewController(UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController"), animated: true)
+
+                self?.navigationController?.pushViewController(UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController"), animated: true)
             default:
                 break
             }
-            
+
         })
     }
     
@@ -79,7 +78,11 @@ class ORFlutterViewController: FlutterViewController, UIGestureRecognizerDelegat
         
     }
     
-
+    deinit {
+        if self.engine != nil {
+            FlutterEngineManager.manager.destoryFlutter(engine: self.engine!)
+        }
+    }
     /*
     // MARK: - Navigation
 

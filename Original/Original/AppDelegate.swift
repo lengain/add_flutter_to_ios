@@ -11,10 +11,10 @@ import Flutter
 @main
 class AppDelegate: FlutterAppDelegate {
     
-    let engines = FlutterEngineGroup(name: "Original", project: nil)
 
     override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FlutterEngineManager.preload()
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
     
